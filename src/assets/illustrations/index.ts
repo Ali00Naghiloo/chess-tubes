@@ -1,0 +1,9 @@
+export { default as PageNotFoundIllustration } from './PageNotFoundIllustration';
+export { default as ContactUsIllustration } from './ContactUsIllustration';
+export { default as EmptyAddressesIllustration } from './EmptyAddressesIllustration';
+export { default as EmptyOrderIllustration } from './CompletedIllustrations';
+export { default as CourseIllustration } from './CourseIllustration';
+export { default as FailurePaymentIllustration } from './FailurePaymentIllustration';
+export { default as SuccessPaymentIllustration } from './SuccessPaymentIllustration';
+export { default as LoginIllustration } from './LoginIllustration';
+export { default as LoginV2Illustration } from './LoginV2Illustration';

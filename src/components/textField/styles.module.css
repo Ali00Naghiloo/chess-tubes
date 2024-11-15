@@ -1,0 +1,106 @@
+.con {
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  padding-top: 24px;
+  position: relative;
+}
+
+.input {
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  outline: none;
+  border: 1.8px solid var(--outline);
+  width: 270px;
+  transition: border-color 0.2s;
+  direction: ltr;
+  width: 100%;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.leftAdornmentPadding {
+  padding-left: 3.6rem;
+}
+
+.rightAdornmentPadding {
+  padding-right: 3.6rem;
+}
+
+.rtl {
+  direction: rtl;
+}
+.ltr {
+  direction: ltr;
+}
+
+.input:focus {
+  border-color: var(--primary60);
+  transition: border-color 0.4s;
+}
+
+.input:disabled {
+  background-color: rgba(179, 179, 179, 0.3);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.helperText {
+  margin-top: 0.3rem;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+.label div {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.2rem;
+}
+
+.inputCon {
+  position: relative;
+}
+
+.con .leftAdornment {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translate(0, -40%);
+  display: flex;
+}
+
+.con .rightAdornment {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translate(0, -40%);
+  display: flex;
+}
+
+.error {
+  border-color: var(--error);
+  border-width: 2px;
+  color: var(--error);
+}
+
+.error:focus {
+  border-color: var(--error);
+  border-width: 2px;
+}
+
+.helperTextError {
+  color: var(--error);
+  opacity: 1;
+}

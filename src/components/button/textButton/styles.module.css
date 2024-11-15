@@ -1,0 +1,49 @@
+.button {
+  padding: 0.5rem 1rem;
+  position: relative;
+  min-width: 150px;
+  border-radius: 5px;
+  border: none;
+  color: var(--primary60);
+  stroke: var(--onPrimary);
+  font-family: 'Vazirmatn';
+  background-color: transparent;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.fullWidth {
+  width: 100%;
+}
+.button:hover {
+  background-color: var(--primary95);
+  transition: background-color 0.3s;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+.button:disabled:hover {
+  background-color: transparent;
+}
+
+.button:disabled .label {
+  color: rgba(37, 37, 37, 0.3);
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinnerCon {
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  stroke: var(--primary60);
+}

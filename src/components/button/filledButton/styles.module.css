@@ -1,0 +1,51 @@
+.button {
+  padding: 0.5rem 1rem;
+  position: relative;
+  min-width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary60);
+  color: var(--onPrimary);
+  stroke: var(--onPrimary);
+  font-family: 'Vazirmatn';
+
+  transition: background-color 0.2s;
+  cursor: pointer;
+  box-shadow: var(--1dp);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.button:focus {
+  box-shadow: var(--0dp);
+}
+
+.button:hover {
+  background-color: var(--primary50);
+  transition: background-color 0.3s;
+}
+
+.button:disabled {
+  background-color: rgba(37, 37, 37, 0.5);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinnerCon {
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  stroke: var(--onPrimary);
+}

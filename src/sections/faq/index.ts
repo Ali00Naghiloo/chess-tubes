@@ -1,0 +1,1 @@
+export { default as FaqTopSection } from './FaqTopSection';
