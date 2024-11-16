@@ -54,7 +54,7 @@ export default function CourseSideMainInfo() {
           <Iconify icon="fluent:learning-app-20-filled" color="grey.600" />
           <Typography fontWeight={500}> نرم افزار مورد نیاز: </Typography>
 
-          <Link href="https://spotplayer.ir/" fontWeight={600}>
+          <Link href="https://spotplayer.ir/#download" fontWeight={600}>
             اسپات پلیر
           </Link>
         </Stack>

@@ -109,9 +109,14 @@ export class CommentService implements ICommentService {
   }
 
   async getHomeTestimonials(): Promise<any> {
-    // const response = await axios.get(`api/`);
-    // return response;
-    return { data: _appTestimonials };
+    const response = await axios.get(`api/testimonial`).then((res) => {
+      if (res.data) {
+        return res.data;
+      } else {
+        return [];
+      }
+    });
+    return response;
   }
 
   async getUserComments(queries: string): Promise<any> {

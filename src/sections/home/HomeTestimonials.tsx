@@ -13,7 +13,8 @@ type ItemProps = {
   image: string;
   rating: string | number;
   name: string;
-  description: string;
+  title: string;
+  comment: string;
 };
 
 interface Props extends CardProps {
@@ -79,7 +80,7 @@ type CarouselItemProps = {
 };
 
 function CarouselItem({ item, isActive }: CarouselItemProps) {
-  const { image, description, name } = item;
+  const { image, comment, name, title } = item;
 
   return (
     <Stack
@@ -126,7 +127,7 @@ function CarouselItem({ item, isActive }: CarouselItemProps) {
             opacity: isActive ? 1 : 0.6,
           }}
         >
-          {description}
+          {comment}
         </Typography>
       </Stack>
 
@@ -138,6 +139,9 @@ function CarouselItem({ item, isActive }: CarouselItemProps) {
         <Avatar src={PATH_PAGE.avatarImageUrl(image)} sx={{ width: 55, height: 55 }} />
         <Typography textAlign="center" variant="button">
           {name}
+        </Typography>
+        <Typography sx={{ textWrap: 'nowrap' }} textAlign="center" variant="subtitle2">
+          {title}
         </Typography>
       </Stack>
     </Stack>

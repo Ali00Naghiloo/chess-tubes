@@ -185,6 +185,10 @@ export default function ChangeEmailStep2({ setActiveStep, activeSteps }: Props) 
         </Button>
       </DialogContent>
 
+      <Typography sx={{ p: 2 }} variant="subtitle2">
+        توجه : لطفا قبل از درخواست مجدد, حتما پوشه هرزنامه (اسپم) خود را بررسی نمایید.
+      </Typography>
+
       <Divider />
 
       <DialogActions dir="ltr">

@@ -23,8 +23,9 @@ export interface CommentState {
 
 export interface HomeTestimonials {
   id: string | number;
-  description: string;
+  comment: string;
   name: string;
+  title: string;
   rating: string | number;
   image: string;
 }

@@ -18,7 +18,7 @@ export default function CartSummary() {
 
   const isMobile = useResponsive('down', 'md');
 
-  const { totalPrice, couponDiscount, totalDiscount } = useSelector((s) => s.cart);
+  const { totalPrice, couponDiscount, totalDiscount, totalCount } = useSelector((s) => s.cart);
 
   return (
     <Box
@@ -40,7 +40,13 @@ export default function CartSummary() {
       component={isMobile ? Paper : Stack}
     >
       <Stack direction="row" spacing={2} justifyContent="space-between" alignItems="center">
-        <Button href={PATH_PAGE.checkout} size="large" variant="contained" disableElevation>
+        <Button
+          disabled={totalCount ? false : true}
+          href={PATH_PAGE.checkout}
+          size="large"
+          variant="contained"
+          disableElevation
+        >
           ثبت سفارش
         </Button>
 
@@ -48,9 +54,11 @@ export default function CartSummary() {
           <Typography variant="subtitle2">جمع سبد خرید</Typography>
           <Stack direction="row">
             <Typography variant="h5" fontWeight={600}>
-              {enNumToPerPrice(
-                Number(totalPrice) - (Number(totalDiscount) + Number(couponDiscount))
-              )}
+              {totalPrice
+                ? enNumToPerPrice(
+                    Number(totalPrice) - (Number(totalDiscount) + Number(couponDiscount))
+                  )
+                : 0}
             </Typography>
             <SvgColor src="/assets/icons/products/ic_toman.svg" sx={{ width: 20, ml: 0.5 }} />
           </Stack>

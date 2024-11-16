@@ -109,9 +109,18 @@ export default function ShopOffers() {
               )}
 
               <Stack direction="row" dir="rtl" spacing={1} sx={{ px: 2 }}>
-                {pageProducts.map((p) => (
-                  <ShopCard key={p.id} {...p} paperProps={{ sx: { width: 210 } }} />
-                ))}
+                {pageProducts
+                  ? pageProducts.map((p) => (
+                      <ShopCard
+                        key={p.id}
+                        {...p}
+                        discount={{
+                          discountPercent: p.discountPercent,
+                        }}
+                        paperProps={{ sx: { width: 210 } }}
+                      />
+                    ))
+                  : null}
               </Stack>
             </Stack>
           </HorizontalScrollbar>
