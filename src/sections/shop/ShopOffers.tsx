@@ -116,6 +116,9 @@ export default function ShopOffers() {
                         {...p}
                         discount={{
                           discountPercent: p.discountPercent,
+                          end_date: '',
+                          product_id: 0,
+                          start_date: '',
                         }}
                         paperProps={{ sx: { width: 210 } }}
                       />
