@@ -17,6 +17,7 @@ import { User } from '@/modules/user/models/user';
 import editPersonalInfo from '@/modules/user/redux/operators/editPersonalInfo';
 // utils
 import { enNumToPer } from '@/utils/persianUtils';
+import moment from 'jalali-moment';
 
 // ----------------------------------------------------------------------
 
@@ -60,6 +61,8 @@ export default function AccountPersonalInfo() {
     about: Yup.string().optional(),
   });
 
+  const date = new Date(parseFloat(birthday) * 1000);
+  // const formattedDate = moment().unix(date).locele.format("YYYY/MM/DD");
   const defaultValues: FormValuesProps = {
     name: fullname ?? '',
     birthday: new Date(birthday),
@@ -138,6 +141,7 @@ export default function AccountPersonalInfo() {
           <Grid item xs={12} sm={12 / 2}>
             <RHFDatePicker
               name="birthday"
+              onChange={(e) => console.log(e)}
               slotProps={{
                 textField: {
                   size: 'small',
